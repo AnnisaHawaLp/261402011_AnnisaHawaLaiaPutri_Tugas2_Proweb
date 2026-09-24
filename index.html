@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas ProWeb Form Pendaftaran</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Formulir Pendaftaran</h2>
+        <form action="#" method="POST">
+            
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="buat password baru" required>
+            </div>
+
+            <!-- Perbaikan 1: Ditambahkan penutup </div> di akhir grup ini -->
+            <div class="form-group">
+                <label for="kota">Kota Pilihan Mu:</label>
+                <select id="kota" name="kota">
+                    <option value="">-- Pilih Kota --</option>
+                    <option value="jakarta">Tokyo</option>
+                    <option value="bandung">Seoul</option> <!-- Perbaikan typo Seoul -->
+                    <option value="surabaya">Kuala Lumpur</option>
+                    <option value="medan">Jakarta</option>
+                    <option value="Pekanbaru">Medan</option>
+                </select>
+            </div>
+
+            <!-- Perbaikan 2: Mengubah id menjadi "bias" agar tidak bentrok dengan id "kota" -->
+            <div class="form-group">
+                <label for="bias">Bias Mu:</label>
+                <select id="bias" name="bias">
+                    <option value="">-- Pilih Bias --</option>
+                    <option value="Ricky ZB1">Ricky ZB1</option>
+                    <option value="Martin CORTIS">Martin CORTIS</option>
+                    <option value="Doyoung NCT127">Doyoung NCT127</option> <!-- Perbaikan typo NCT127 -->
+                    <option value="Baekyun EXO">Baekyun EXO</option>
+                    <option value="Jin BTS">Jin BTS</option>
+                    <option value="Hyunjin SKZ">Hyunjin SKZ</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="gender" value="male"> male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female"> female
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label>
+                    <input type="checkbox" name="setuju" value="ya" required> Saya suka cortis
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="catatan">Catatan Tambahan:</label>
+                <textarea id="catatan" name="catatan" rows="4" placeholder="Tulis notes or saran di sini ya😸🐾🐒..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">SEND DATA</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #fef4f4 0%, #eef7f4 100%);
+    color: #334155; /* Mengganti 'aquamarine' menjadi abu-abu gelap agar teks terbaca jelas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(220, 200, 200, 0.3);
+    width: 100%;
+    max-width: 460px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+h2 {
+    margin-bottom: 25px;
+    color: #4a5568;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Mengatur label utama input (Nama, Password, Kota, Bias, dll) */
+.form-group > label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #64748b;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #475569;
+    background-color: #f8fafc;
+    transition: all 0.25s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #bbf7d0;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(187, 247, 208, 0.4);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    padding-top: 4px;
+}
+
+/* Perbaikan: Menggunakan inline-flex dan menonaktifkan uppercase khusus label pilihan/opsi */
+.radio-group label,
+.checkbox-group label {
+    display: inline-flex !important; 
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: #475569;
+    text-transform: none !important;
+    letter-spacing: normal;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #fbcfe8;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #fbcfe8;
+    color: #6b21a8;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(251, 207, 232, 0.4);
+    transition: all 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #f9a8d4;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(249, 168, 212, 0.5);
+}
+
+.btn-submit:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(249, 168, 212, 0.4);
+}
